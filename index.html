@@ -1,3 +1,5 @@
+<!-- build an object that will keep count of the clicks -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +12,42 @@
     <button>Click!</button>
 
 <script>
-        const counter = {
-            cnt: 0, 
-            inc: function(){
-                cnt++;
-                console.log(cnt);
-            }
-        }
-    };
 
-    const button = document.getElementsByTagName('button')[0]
-    button.addEventListener('click', counter.incr(), false)
+    // function increaseCounter () {
+    //     counter.incr
+    // }
+    
+
+    //     const counter = {
+    //         cnt: 0, 
+
+    //         inc: function(){
+    //             cnt++;
+    //             console.log(cnt);
+    //         }
+    // };
+
+
+    // const button = document.getElementsByTagName('button')[0]
+    // button.addEventListener('click', counter.inc(), false)
+
+
+    function a() {
+        var x = 2
+        console.log('Scope a = ' + x)
+        b();
+    }
+
+    function b() {
+        // var x
+        console.log('Scope b = ' + x)
+    }
+
+    var x = 1;
+    console.log('Global scope = ' + x)
+    a()
+    console.log('Global scope after launching a() = ')
+
 </script>
 </body>
 </html>
